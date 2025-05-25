@@ -14,7 +14,7 @@ unsigned int Produs::getId() const {
     return id;
 }
 
-string& Produs::getDenumire() {
+const string& Produs::getDenumire() const {
     return denumire;
 }
 
@@ -31,7 +31,7 @@ void Produs::afisare() const {
     cout << "[" << id << "] " << denumire << " - " << pret << " RON\n";
 }
 
-ostream& operator<<(ostream& os,  Produs& p) {
+ostream& operator<<(ostream& os, const Produs& p) {
     os << "[" << p.getId() << "] " << p.getDenumire() << " - " << p.getPret() << " RON";
     return os;
 }

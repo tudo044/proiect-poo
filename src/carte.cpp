@@ -26,8 +26,8 @@ int Carte::getNrPagini() const {
     return nrPagini;
 }
 
-ostream& operator<<(ostream& os, Carte& c) {
-    os << static_cast< Produs&>(c) << ", Autor: " << c.getAutor() << ", Pagini: " << c.getNrPagini();
+ostream& operator<<(ostream& os,const Carte& c) {
+    os << dynamic_cast<const Produs&>(c) << ", Autor: " << c.getAutor() << ", Pagini: " << c.getNrPagini();
     return os;
 }
 

@@ -1,6 +1,9 @@
-#include "../include/produs.h"
+#include <utility>
 
-Produs::Produs(const string& den, double p) : id(IDGenerator::getInstance().getNextId()), denumire(den), pret(p) {
+#include "../include/produs.h"
+#include "eroareaplicatie.h"
+#include "idgenerator.h"
+Produs::Produs(string  den, double p) : id(IDGenerator::getInstance().getNextId()), denumire(std::move(den)), pret(p) {
     if (pret < 0)
         throw EroareAplicatie("Pretul nu poate fi negativ.");
 }

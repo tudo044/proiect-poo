@@ -1,7 +1,9 @@
-#include "../include/electronic.h"
+#include <utility>
 
-Electronic::Electronic(const string& den, double p, const string& mar, int g)
-    : Produs(den, p), marca(mar), garantie(g) {
+#include "../include/electronic.h"
+#include "eroareaplicatie.h"
+Electronic::Electronic(const string& den, double p, string  mar, int g)
+    : Produs(den, p), marca(std::move(mar)), garantie(g) {
     if (garantie < 0)
         throw EroareAplicatie("Garantia trebuie sa fie pozitiva.");
 }

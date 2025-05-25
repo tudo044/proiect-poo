@@ -12,8 +12,8 @@ private:
     string mesaj;
 
 public:
-    explicit EroareAplicatie(const string& m);
-    const char* what() const noexcept override;
+    explicit EroareAplicatie(string  m);
+    [[nodiscard]] const char* what() const noexcept override;
 };
 
 #endif // EROAREAPLICATIE_H

@@ -1,10 +1,10 @@
 #ifndef ELECTRONIC_H
 #define ELECTRONIC_H
 
-#include <iostream>
+
 #include <string>
-#include "Produs.h"
-#include "EroareAplicatie.h"
+#include "produs.h"
+
 
 using std::string;
 
@@ -14,9 +14,9 @@ private:
     int garantie;
 
 public:
-    Electronic(const string& den, double p, const string& mar, int g);
+    Electronic(const string& den, double p, string  mar, int g);
     void afisare() const override;
-    Produs* clone() const override;
+    [[nodiscard]] Produs* clone() const override;
 };
 
 #endif // ELECTRONIC_H

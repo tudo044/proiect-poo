@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "IDGenerator.h"
+
 
 using std::string;
 using std::cout;
@@ -15,15 +15,15 @@ protected:
     string email;
 
 public:
-    Client(const string& n, const string& e);
+    Client(string  n, string  e);
     virtual ~Client();
 
-    unsigned int getId() const;
-    string getNume() const;
+    [[nodiscard]] unsigned int getId() const;
+    [[nodiscard]] string getNume() const;
 
     virtual void afisare() const;
-    virtual Client* clone() const = 0;
-    virtual double getReducere() const;
+    [[nodiscard]] virtual Client* clone() const = 0;
+    [[nodiscard]] virtual double getReducere() const;
 };
 
 #endif // CLIENT_H

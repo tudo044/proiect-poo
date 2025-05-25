@@ -4,8 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-#include "IDGenerator.h"
-#include "Produs.h"
+#include "produs.h"
 
 using std::vector;
 using std::shared_ptr;
@@ -18,10 +17,10 @@ private:
     vector<shared_ptr<Produs>> produse;
 
 public:
-    Comanda(unsigned int cid);
+    explicit Comanda(unsigned int cid);
     void adaugaProdus(const Produs& p);
     void afisare() const;
-    double total() const;
+    [[nodiscard]] double total() const;
 };
 
 #endif // COMANDA_H

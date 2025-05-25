@@ -3,9 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <cmath>
-#include "IDGenerator.h"
-#include "EroareAplicatie.h"
+
 
 using std::string;
 using std::ostream;
@@ -18,16 +16,16 @@ protected:
     double pret;
 
 public:
-    Produs(const string& den, double p);
+    Produs(string  den, double p);
     virtual ~Produs();
 
-    unsigned int getId() const;
-    string getDenumire() const;
-    double getPret() const;
+    [[nodiscard]] unsigned int getId() const;
+    [[nodiscard]] string getDenumire() const;
+    [[nodiscard]] double getPret() const;
     void setPret(double p);
 
     virtual void afisare() const;
-    virtual Produs* clone() const = 0;
+    [[nodiscard]] virtual Produs* clone() const = 0;
 };
 
 ostream& operator<<(ostream& os, const Produs& p);

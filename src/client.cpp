@@ -1,7 +1,9 @@
-#include "../include/client.h"
+#include <utility>
 
-Client::Client(const string& n, const string& e)
-    : id(IDGenerator::getInstance().getNextId()), nume(n), email(e) {}
+#include "../include/client.h"
+#include "idgenerator.h"
+Client::Client(string  n, string  e)
+    : id(IDGenerator::getInstance().getNextId()), nume(std::move(n)), email(std::move(e)) {}
 
 Client::~Client() = default;
 

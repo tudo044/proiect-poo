@@ -1,8 +1,8 @@
 #ifndef SALARIAT_H
 #define SALARIAT_H
 
-#include "Client.h"
-#include "EroareAplicatie.h"
+#include "client.h"
+
 
 class Salariat : public Client {
 private:
@@ -11,9 +11,9 @@ private:
 public:
     Salariat(const string& n, const string& e, double s);
     void afisare() const override;
-    Client* clone() const override;
+    [[nodiscard]] Client* clone() const override;
 
-    double getSalariu() const;
+    [[nodiscard]] double getSalariu() const;
     void plateste(double suma);
 };
 

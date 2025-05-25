@@ -1,7 +1,9 @@
-#include "../include/carte.h"
+#include <utility>
 
-Carte::Carte(const string& den, double p, const string& aut, int nrP)
-    : Produs(den, p), autor(aut), nrPagini(nrP) {
+#include "../include/carte.h"
+#include "eroareaplicatie.h"
+Carte::Carte(const string& den, double p, string  aut, int nrP)
+    : Produs(den, p), autor(std::move(aut)), nrPagini(nrP) {
     if (nrPagini <= 0)
         throw EroareAplicatie("Numarul de pagini trebuie sa fie pozitiv.");
 }

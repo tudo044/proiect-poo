@@ -1,12 +1,12 @@
 #ifndef MAGAZIN_H
 #define MAGAZIN_H
 
-#include <iostream>
+
 #include <vector>
 #include <memory>
-#include "Produs.h"
-#include "Client.h"
-#include "Comanda.h"
+#include "produs.h"
+#include "client.h"
+#include "comanda.h"
 
 using std::vector;
 using std::shared_ptr;
@@ -20,12 +20,12 @@ private:
 public:
     void adaugaProdus(const Produs& p);
     void afiseazaProduse() const;
-    const Produs* getProdus(unsigned int id) const;
+    [[nodiscard]] const Produs* getProdus(unsigned int id) const;
     void modificaPret(unsigned int id, double nou);
 
     void adaugaClient(const Client& c);
     void afiseazaClienti() const;
-    const Client* getClient(unsigned int id) const;
+    [[nodiscard]] const Client* getClient(unsigned int id) const;
 
     void adaugaComanda(const Comanda& c);
     void afiseazaComenzi() const;

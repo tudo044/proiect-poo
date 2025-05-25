@@ -1,5 +1,5 @@
 #include "../include/comanda.h"
-
+#include "idgenerator.h"
 Comanda::Comanda(unsigned int cid)
     : id(IDGenerator::getInstance().getNextId()), idClient(cid) {}
 

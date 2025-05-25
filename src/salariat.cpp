@@ -1,5 +1,5 @@
 #include "../include/salariat.h"
-
+#include "eroareaplicatie.h"
 Salariat::Salariat(const string& n, const string& e, double s)
     : Client(n, e), salariu(s) {}
 

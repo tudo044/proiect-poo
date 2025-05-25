@@ -11,8 +11,8 @@ private:
     string parola;
 
 public:
-    Admin(const string& e, const string& p);
-    bool autentificare(const string& e, const string& p) const;
+    Admin(string  e, string  p);
+    [[nodiscard]] bool autentificare(const string& e, const string& p) const;
 };
 
 #endif // ADMIN_H

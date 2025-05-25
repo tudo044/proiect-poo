@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "Produs.h"
-#include "EroareAplicatie.h"
+#include "produs.h"
+
 
 using std::string;
 using std::ostream;
@@ -16,12 +16,12 @@ private:
     int nrPagini;
 
 public:
-    Carte(const string& den, double p, const string& aut, int nrP);
+    Carte(const string& den, double p, string  aut, int nrP);
     void afisare() const override;
-    Produs* clone() const override;
+    [[nodiscard]] Produs* clone() const override;
 
-     string getAutor() const;
-     int getNrPagini() const;
+     [[nodiscard]] string getAutor() const;
+     [[nodiscard]] int getNrPagini() const;
 };
 
 ostream& operator<<(ostream& os, const Carte& c);

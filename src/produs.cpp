@@ -27,13 +27,13 @@ void Produs::setPret(double p) {
         pret = p;
 }
 
-void Produs::afisare() const {
-    cout << "[" << id << "] " << denumire << " - " << pret << " RON\n";
-}
 
 ostream& operator<<(ostream& os, const Produs& p) {
     os << "[" << p.getId() << "] " << p.getDenumire() << " - " << p.getPret() << " RON";
     return os;
+}
+ void Produs::afisare() const {
+    cout << *this;
 }
 bool operator==(const Produs& p1,const Produs& p2) {
     return p1.getDenumire() == p2.getDenumire() && std::abs(p1.getPret() - p2.getPret()) < 1e-6;

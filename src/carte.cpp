@@ -8,9 +8,8 @@ Carte::Carte(const string& den, double p, string  aut, int nrP)
         throw EroareAplicatie("Numarul de pagini trebuie sa fie pozitiv.");
 }
 
-void Carte::afisare() const {
-    cout << "Carte -> ";
-    Produs::afisare();
+void Carte:: afisare() const {
+    cout << "Carte -> " << *this << "\n";  // Uses operator<< for Carte
     cout << "  Autor: " << autor << ", Pagini: " << nrPagini << "\n";
 }
 

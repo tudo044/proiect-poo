@@ -14,7 +14,7 @@ unsigned int Produs::getId() const {
     return id;
 }
 
-string Produs::getDenumire() const {
+string& Produs::getDenumire() {
     return denumire;
 }
 
@@ -31,11 +31,10 @@ void Produs::afisare() const {
     cout << "[" << id << "] " << denumire << " - " << pret << " RON\n";
 }
 
-ostream& operator<<(ostream& os, const Produs& p) {
+ostream& operator<<(ostream& os,  Produs& p) {
     os << "[" << p.getId() << "] " << p.getDenumire() << " - " << p.getPret() << " RON";
     return os;
 }
-
-bool operator==(const Produs& p1, const Produs& p2) {
+bool operator==(Produs& p1,Produs& p2) {
     return p1.getDenumire() == p2.getDenumire() && std::abs(p1.getPret() - p2.getPret()) < 1e-6;
 }

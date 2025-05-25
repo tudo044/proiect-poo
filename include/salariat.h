@@ -13,7 +13,6 @@ public:
     void afisare() const override;
     [[nodiscard]] Client* clone() const override;
 
-    [[nodiscard]] double getSalariu() const;
     void plateste(double suma);
 };
 

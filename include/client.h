@@ -19,7 +19,7 @@ public:
     virtual ~Client();
 
     [[nodiscard]] unsigned int getId() const;
-    [[nodiscard]] string getNume() const;
+
 
     virtual void afisare() const;
     [[nodiscard]] virtual Client* clone() const = 0;

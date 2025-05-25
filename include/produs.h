@@ -20,7 +20,7 @@ public:
     virtual ~Produs();
 
     [[nodiscard]] unsigned int getId() const;
-    [[nodiscard]] string getDenumire() const;
+    [[nodiscard]] string& getDenumire();
     [[nodiscard]] double getPret() const;
     void setPret(double p);
 
@@ -28,8 +28,8 @@ public:
     [[nodiscard]] virtual Produs* clone() const = 0;
 };
 
-ostream& operator<<(ostream& os, const Produs& p);
-bool operator==(const Produs& p1, const Produs& p2);
+ostream& operator<<(ostream& os,  Produs& p);
+bool operator==(const Produs& p1,  Produs& p2);
 
 #endif // PRODUS_H
 

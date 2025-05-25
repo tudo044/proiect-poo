@@ -13,9 +13,6 @@ Client* Salariat::clone() const {
     return new Salariat(*this);
 }
 
-double Salariat::getSalariu() const {
-    return salariu;
-}
 
 void Salariat::plateste(double suma) {
     if (suma > salariu)

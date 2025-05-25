@@ -5,6 +5,7 @@
 #include <algorithm>
 #include "magazin.h"
 #include "admin.h"
+#include "produs.h"
 #include "carte.h"
 #include "client.h"
 #include "clientpremium.h"
@@ -12,7 +13,6 @@
 #include "comanda.h"
 #include "electronic.h"
 #include "eroareaplicatie.h"
-#include "produs.h"
 #include "salariat.h"
 
 using namespace std;

@@ -10,6 +10,8 @@ using std::string;
 using std::ostream;
 using std::istream;
 
+class Produs;
+ostream& operator<<(ostream& os, const Produs& p);
 class Carte : public Produs {
 private:
     string autor;

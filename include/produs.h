@@ -28,7 +28,6 @@ public:
     [[nodiscard]] virtual Produs* clone() const = 0;
 };
 
-ostream& operator<<(ostream& os,  const Produs& p);
 bool operator==(const Produs& p1, const Produs& p2);
 
 #endif // PRODUS_H

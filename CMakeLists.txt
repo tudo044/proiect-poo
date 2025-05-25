@@ -130,7 +130,31 @@ FetchContent_MakeAvailable(googletest)
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${MAIN_EXECUTABLE_NAME} main.cpp ${SOURCES})
+add_executable(${MAIN_EXECUTABLE_NAME} main.cpp ${SOURCES}
+        src/idgenerator.cpp
+        include/idgenerator.h
+        src/eroareaplicatie.cpp
+        include/eroareaplicatie.h
+        src/produs.cpp
+        include/produs.h
+        src/carte.cpp
+        include/carte.h
+        src/electronic.cpp
+        include/electronic.h
+        src/client.cpp
+        include/client.h
+        src/clientpremium.cpp
+        include/clientpremium.h
+        src/admin.cpp
+        include/admin.h
+        src/comanda.cpp
+        include/comanda.h
+        src/clientstandard.cpp
+        include/clientstandard.h
+        src/salariat.cpp
+        include/salariat.h
+        src/magazin.cpp
+        include/magazin.h)
 
 # NOTE: Add all defined targets (e.g. executables, libraries, etc. )
 # NOTE: RUN_SANITIZERS is optional, if it's not present it will default to true

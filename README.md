@@ -1,12 +1,18 @@
-# Nu primesc notă pentru că nu am pus titlu și descriere
+# MAGAZIN ONLINE 
 
-### Folosiți template-ul corespunzător grupei voastre!
+### Acest proiect reprezintă un sistem simplu de gestionare a unui magazin online, care permite administrarea produselor, clienților și comenzilor. Aplicația este construită folosind programare orientată pe obiect în C++, cu ierarhii de clase pentru produse (de exemplu, cărți și electronice) și clienți (standard, premium, salariați).
 
-| Laborant  | Link template                                |
-|-----------|----------------------------------------------|
-| Dragoș B  | https://github.com/Ionnier/oop-template      |
-| Tiberiu M | https://github.com/MaximTiberiu/oop-template |
-| Marius MC | https://github.com/mcmarius/oop-template     |
+Gestionarea produselor: Se pot adăuga produse de tip carte și electronic, fiecare cu caracteristici specifice.
+
+Gestionarea clienților: Sistemul suportă trei tipuri de clienți, fiecare cu metode proprii (ex: clienți premium au reduceri, salariații pot plăti din salariu).
+
+Comenzi: Clienții pot plasa comenzi compuse din mai multe produse. Prețul final ține cont de reduceri sau plata din salariu.
+
+Autentificare admin: Administratorul poate modifica prețurile produselor după autentificare.
+
+Design: Se folosesc concepte OOP importante precum clase abstracte, polimorfism, excepții personalizate, și smart pointers pentru managementul memoriei.
+
+Proiectul include un meniu interactiv în consolă pentru adăugarea și afișarea de clienți, produse și comenzi, precum și pentru gestionarea prețurilor.
 
 ## Instrucțiuni de compilare
 

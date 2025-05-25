@@ -20,7 +20,7 @@ public:
     void afisare() const override;
     [[nodiscard]] Produs* clone() const override;
 
-     [[nodiscard]] string getAutor() const;
+     [[nodiscard]] const string& getAutor() const;
      [[nodiscard]] int getNrPagini() const;
 };
 

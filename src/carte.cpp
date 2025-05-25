@@ -18,7 +18,7 @@ Produs* Carte::clone() const {
     return new Carte(*this);
 }
 
-string Carte::getAutor() const {
+const string& Carte::getAutor() const {
     return autor;
 }
 
@@ -27,7 +27,7 @@ int Carte::getNrPagini() const {
 }
 
 ostream& operator<<(ostream& os,const Carte& c) {
-    os << dynamic_cast<const Produs&>(c) << ", Autor: " << c.getAutor() << ", Pagini: " << c.getNrPagini();
+    os << static_cast<const Produs&>(c) << ", Autor: " << c.getAutor() << ", Pagini: " << c.getNrPagini();
     return os;
 }
 

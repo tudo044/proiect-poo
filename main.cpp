@@ -101,9 +101,12 @@ int main() {
                     else c.adaugaProdus(*p);
                 }
                 double total = c.total();
-                const Salariat* sal = dynamic_cast<const Salariat*>(client);
+
+
+
+                const auto* sal = dynamic_cast<const Salariat*>(client);
                 if (sal) {
-                    Salariat* s = const_cast<Salariat*>(sal);
+                    auto* s = const_cast<Salariat*>(sal);
                     s->plateste(total);
                     cout << "Total platit din salariu: " << total << " RON\n";
                 } else {

@@ -29,7 +29,7 @@ public:
 };
 
 ostream& operator<<(ostream& os,  const Produs& p);
-bool operator==(const Produs& p1,  Produs& p2);
+bool operator==(const Produs& p1, const Produs& p2);
 
 #endif // PRODUS_H
 

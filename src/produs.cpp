@@ -35,6 +35,6 @@ ostream& operator<<(ostream& os, const Produs& p) {
     os << "[" << p.getId() << "] " << p.getDenumire() << " - " << p.getPret() << " RON";
     return os;
 }
-bool operator==(Produs& p1,Produs& p2) {
+bool operator==(const Produs& p1,const Produs& p2) {
     return p1.getDenumire() == p2.getDenumire() && std::abs(p1.getPret() - p2.getPret()) < 1e-6;
 }

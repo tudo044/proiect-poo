@@ -20,8 +20,8 @@ public:
     void afisare() const override;
     Produs* clone() const override;
 
-    string getAutor() const;
-    int getNrPagini() const;
+     string getAutor() const;
+     int getNrPagini() const;
 };
 
 ostream& operator<<(ostream& os, const Carte& c);

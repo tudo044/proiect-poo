@@ -9,7 +9,8 @@ Carte::Carte(const string& den, double p, string  aut, int nrP)
 }
 
 void Carte:: afisare() const {
-    cout << "Carte -> " << *this << "\n";  // Uses operator<< for Carte
+    cout << "Carte -> " << *this << "\n";
+    Produs::afisare();
     cout << "  Autor: " << autor << ", Pagini: " << nrPagini << "\n";
 }
 

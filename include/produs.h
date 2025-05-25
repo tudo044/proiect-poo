@@ -29,6 +29,6 @@ public:
 };
 
 bool operator==(const Produs& p1, const Produs& p2);
-
+ostream& operator<<(ostream& os, const Produs& p);
 #endif // PRODUS_H
 

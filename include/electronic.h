@@ -11,7 +11,7 @@ using std::string;
 class Electronic : public Produs {
 private:
     string marca;
-    int garantie;
+     int garantie;
 
 public:
     Electronic(const string& den, double p, string  mar, int g);
